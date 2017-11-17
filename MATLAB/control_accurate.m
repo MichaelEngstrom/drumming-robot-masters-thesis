@@ -24,7 +24,7 @@ function output=control_accurate(song1, bandlimits, maxfreq)
   % Length (in power-2 samples) of the song
   
   sample_size = floor(16*maxfreq); 
-  scaling = 0.73;   % Experimentally derived
+  scaling = 0.74;   % Experimentally derived
 %  scaling = 1;  
   % Takes in the two wave files
   
