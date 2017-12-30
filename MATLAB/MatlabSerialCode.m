@@ -22,7 +22,9 @@ Mode = 'a';
 
     
 prompt = 'Enter your COM port: ';
-str = input(prompt,'s');
+com_str = input(prompt,'s');
+% make sure com port is CAPITALS
+str = upper(com_str);
 prompt2 = strcat(str, ': Is this correct? Y/N [Y]: ');
 str2 = input(prompt2,'s');
 if (strcmp(str2, 'Y') || strcmp(str2, 'y'))

@@ -18,10 +18,12 @@
 %
 loop_val = 1;
 repeat_val = 0;
+Mode = 'a';
 
     
 prompt = 'Enter your COM port: ';
-str = input(prompt,'s');
+com_str = input(prompt,'s');
+str = upper(com_str);
 prompt2 = strcat(str, ': Is this correct? Y/N [Y]: ');
 str2 = input(prompt2,'s');
 if (strcmp(str2, 'Y') || strcmp(str2, 'y'))
@@ -30,6 +32,7 @@ if (strcmp(str2, 'Y') || strcmp(str2, 'y'))
     fopen(SerBEAT); %--open the serial port to the PIC
 
     while loop_val == 1
+    BPM = 1;
          if (repeat_val ~= 1)
              prompt3 = ('Enter .wav file name, ENTER for microphone, or z to pause: ');
             str3 = input(prompt3,'s');
@@ -37,24 +40,25 @@ if (strcmp(str2, 'Y') || strcmp(str2, 'y'))
                 BPM = control_accurate();
                 %BPM = control_optimizer();
             elseif (strcmp(str3, 'Z') || strcmp(str3, 'z'))
-                BPM = 0;     %set to zero so Mode check drops out to PAUSE
+                BPM = 1;     %set to zero so Mode check drops out to PAUSE
             else
                 BPM = control_accurate(str3);
                 %BPM = control_optimizer(str3);
             end
          else
             BPM = control_accurate();
+            pause(1);
          end
              
         %%%%%%%%%%%%Logic for beat mode to send to Robot Controller%%%%%%%%%
-        while ((BPM > 120) || (BPM < 60))
-            if BPM > 120
-                BPM = (BPM / 2);
-            end
-            if BPM < 60
-                BPM = (BPM * 2);
-            end
-        end
+%         while ((BPM > 120) || (BPM < 60))
+%             if BPM > 120
+%                 BPM = (BPM / 2);
+%             end
+%             if BPM < 60
+%                 BPM = (BPM * 2);
+%             end
+%         end
         BPM
 %        Mode = (ceil((BPM - 59)/6)-1);
         if ((BPM > 59) && (BPM < 62))         %60-61 BPM
@@ -111,6 +115,7 @@ if (strcmp(str2, 'Y') || strcmp(str2, 'y'))
             Mode = 'z';         %Drum is PAUSED
         end
         Mode
+        pause(1);
         %%%%%%%%%%%%End Beat Mode Logic%%%%%%%%%
         %test = num2str(Mode);
         test = strcat(':::', num2str(Mode));
@@ -120,7 +125,7 @@ if (strcmp(str2, 'Y') || strcmp(str2, 'y'))
     %    end
 
         if (repeat_val ~= 1)
-            prompt4 = 'Press R for Repeat, B for BPM Detect Loop, or Q to finish: ';
+            prompt4 = 'Press: R=Repeat, B=BPM Detect Loop (CTRL+C to exit), or Q=finish: ';
             str4 = input(prompt4,'s');
         
             if (strcmp(str4, 'Q') || strcmp(str4, 'q'))
@@ -135,6 +140,7 @@ if (strcmp(str2, 'Y') || strcmp(str2, 'y'))
                 repeat_val = 0;
             end
         end
+        pause(1);
             %continue to end of script
     end
 else
