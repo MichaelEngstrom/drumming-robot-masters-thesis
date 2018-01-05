@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ECE_579_DrummingRobot", "ECE_579_DrummingRobot\ECE_579_DrummingRobot_6_0.cproj", "{E6652831-2EF9-4ACD-BF41-C4AFBE2EEDC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6652831-2EF9-4ACD-BF41-C4AFBE2EEDC4}.Debug|AVR.ActiveCfg = Debug|AVR
+		{E6652831-2EF9-4ACD-BF41-C4AFBE2EEDC4}.Debug|AVR.Build.0 = Debug|AVR
+		{E6652831-2EF9-4ACD-BF41-C4AFBE2EEDC4}.Release|AVR.ActiveCfg = Release|AVR
+		{E6652831-2EF9-4ACD-BF41-C4AFBE2EEDC4}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
