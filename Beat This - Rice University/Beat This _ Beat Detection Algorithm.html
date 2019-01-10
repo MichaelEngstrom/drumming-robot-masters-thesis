@@ -1,0 +1,457 @@
+
+<!-- saved from url=(0069)https://www.clear.rice.edu/elec301/Projects01/beat_sync/beatalgo.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Beat This &gt; Beat Detection Algorithm</title>
+
+<meta http-equiv="charset" content="iso-8859-1">
+
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#333333" alink="#333333" vlink="#333333" marginheight="0" topmargin="0">
+<font face="Verdana, Arial, Helvetica, sans-serif">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+
+  <tbody><tr> 
+
+    <td bgcolor="#003399" align="right" width="1233"> 
+
+      <table cellpadding="4" cellspacing="0" border="0" width="100%" align="right">
+        <tbody><tr> 
+          <td bgcolor="#003399" align="center"> 
+            <p><font color="white" size="+2" face="Verdana, Arial, Helvetica, sans-serif"><b><font size="+3">Beat 
+              This</font></b></font></p>
+            <font face="Verdana, Arial, Helvetica, sans-serif" helvetica,="helvetica," arial="arial" color="orange" size="+1"> 
+            <b><font size="+2">A Beat Synchronization Project</font></b></font> 
+          </td>
+        </tr>
+      </tbody></table>
+
+    </td>
+
+  </tr>
+
+</tbody></table>
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+
+  <tbody><tr> 
+
+    <td bgcolor="#E8E8D0" colspan="2"> 
+
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+        <tbody><tr> 
+          <td><img src="./Beat This _ Beat Detection Algorithm_files/t.gif" width="1" height="6" border="0" alt=""></td>
+        </tr>
+     
+          <tr> 
+            <td align="center" valign="middle"><b><a href="http://www.owlnet.rice.edu/~kileen"><font face="Verdana, Arial, Helvetica, sans-serif">Kileen 
+              Cheng</font></a></b></td>
+            <td align="center" valign="middle"><b><a href="http://www.owlnet.rice.edu/~bobak"><font face="Verdana, Arial, Helvetica, sans-serif">Bobak 
+              Nazer</font></a></b></td>
+            <td align="center" valign="middle"><b><a href="http://www.owlnet.rice.edu/~juppu"><font face="Verdana, Arial, Helvetica, sans-serif">Jyoti 
+              Uppuluri </font></a></b></td>
+            <td align="center" valign="middle"><b><a href="http://www.owlnet.rice.edu/~rpverret"><font face="Verdana, Arial, Helvetica, sans-serif">Ryan 
+              Verret</font></a></b></td>
+          </tr>
+        <tr> </tr>
+        <tr> 
+          <td height="13"><img src="./Beat This _ Beat Detection Algorithm_files/t.gif" width="1" height="6" border="0" alt=""></td>
+        </tr>
+      </tbody></table>
+
+    </td>
+
+  </tr>
+
+</tbody></table>
+
+<table border="0" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" width="100%">
+
+  <tbody><tr> 
+
+    <!-- left begin -->
+
+    <td valign="top" bgcolor="#003399" width="148"> 
+
+      <table cellspacing="0" cellpadding="0" border="0">
+
+        <tbody><tr align="center"> 
+
+          <td colspan="2">&nbsp;</td>
+
+        </tr>
+
+        <tr> 
+
+          <td align="center" bgcolor="#0066cb" colspan="2"> 
+
+            <table cellpadding="0" cellspacing="0" border="0" width="144" align="center" bgcolor="#0066cb">
+              <tbody><tr bgcolor="#EEEEEE"> 
+                <td width="14" height="18"><img src="./Beat This _ Beat Detection Algorithm_files/arrow.gif" border="0" width="12" height="12" alt=""></td>
+                <td valign="middle" width="130"><font face="verdana,
+                arial" size="1" color="#000000">
+		<a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/index.html"><b>HOME</b></a></font></td>
+              </tr>
+              <tr> 
+                <td bgcolor="#999999" colspan="2"><img src="./Beat This _ Beat Detection Algorithm_files/t.gif" border="0" width="134" height="1" alt=""></td>
+              </tr>
+              <!-- Section Links -->
+              
+              <tr bgcolor="#FFFFFF"> 
+                <td valign="top" width="14"><img src="./Beat This _ Beat Detection Algorithm_files/arrow.gif" border="0" width="12" height="12" alt=""></td>
+                <td width="130"> 
+                  <p><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/background.html"><font face="verdana,arial" size="2" color="#000000"><b>Background</b></font></a></p>
+                  <p><br>
+                  </p>
+                </td>
+              </tr>
+              <tr> 
+                <td bgcolor="#999999" colspan="2"><img src="./Beat This _ Beat Detection Algorithm_files/t.gif" border="0" width="134" height="8" alt=""></td>
+              </tr>
+              <!-- Section Links -->
+              <tr bgcolor="#ffffff"> 
+                <td valign="top" width="14"><img src="./Beat This _ Beat Detection Algorithm_files/arrow.gif" border="0" width="12" height="12" alt=""></td>
+                <td width="130"> 
+                  <p><font face="verdana, arial" size="2"><b><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/beatalgo.html">Beat Detection Algorithm</a></b></font><br>
+                    <br>
+                    <font face="verdana, arial" size="1"><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/beatalgo.html#filterbank">Frequency Filterbank</a></font><br>
+                    <font face="verdana, arial" size="1"><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/beatalgo.html#smoothing">Smoothing</a></font><br>
+                    <font face="verdana, arial" size="1"><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/beatalgo.html#diff-rect">Diff-Rect</a></font><br>
+                    <font face="verdana, arial" size="1"><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/beatalgo.html#comb">Comb
+                    Filter</a></font><br>
+		     <br>
+		    <font face="verdana, arial" size="1"><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/beatalgo.html#block">Block Diagram</a></font><br>
+		    <br>
+		    <font face="verdana, arial" size="1"><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/beatalgo.html#code">Matlab Code</a></font><br>
+		     <font face="verdana, arial" size="1"><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/beatalgo.html#plots">Matlab Plots</a></font><br>
+		    
+                    <br>
+                    <br>
+                  </p>
+                </td>
+              </tr>
+              <tr><td bgcolor="#999999" colspan="2"><img src="./Beat This _ Beat Detection Algorithm_files/t.gif" border="0" width="134" height="8" alt=""></td>
+              </tr><tr bgcolor="#FFFFFF"> 
+                <td valign="top" width="14"><img src="./Beat This _ Beat Detection Algorithm_files/arrow.gif" border="0" width="12" height="12" alt=""></td>
+                <td width="130"> 
+                  <p><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/timescale.html"><font face="verdana,arial" size="2" color="#000000"><b>Time Scaling
+              Algorithm</b></font></a><br>
+	      <br>
+		  <font face="verdana, arial" size="1"><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/timescale.html#code">Matlab Code</a></font><br>
+	      
+                  </p>
+                  <p>&nbsp; </p>
+                </td>
+              </tr>
+              <tr><td bgcolor="#999999" colspan="2"><img src="./Beat This _ Beat Detection Algorithm_files/t.gif" border="0" width="134" height="8" alt=""></td>
+              </tr><tr bgcolor="#FFFFFF"> 
+                <td valign="top" width="14"><img src="./Beat This _ Beat Detection Algorithm_files/arrow.gif" border="0" width="12" height="12" alt=""></td>
+                <td width="130"> 
+                  <p><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/phasealign.html"><font face="verdana,arial" size="2" color="#000000"><b>Phase Alignment
+              Algorithm</b></font></a><br>
+	       <br>
+		  <font face="verdana, arial" size="1"><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/phasealign.html#code">Matlab Code</a></font><br>
+		     <font face="verdana, arial" size="1"><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/phasealign.html#plots">Matlab Plots</a></font><br>
+                  </p>
+                  <p>&nbsp; </p>
+                </td>
+              </tr>
+              <tr><td bgcolor="#999999" colspan="2"><img src="./Beat This _ Beat Detection Algorithm_files/t.gif" border="0" width="134" height="8" alt=""></td>
+              </tr><tr bgcolor="#FFFFFF"> 
+                <td valign="top" width="14"><img src="./Beat This _ Beat Detection Algorithm_files/arrow.gif" border="0" width="12" height="12" alt=""></td>
+                <td width="130"> 
+                  <p><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/results.html"><font face="verdana,arial" size="2" color="#000000"><b>Results</b></font></a><br>
+	       <br>
+		  <font face="verdana, arial" size="1"><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/results.html#music">Music Samples</a></font><br>	
+                  </p>
+                  <p>&nbsp; </p>
+                </td>
+              </tr>
+              <tr><td bgcolor="#999999" colspan="2"><img src="./Beat This _ Beat Detection Algorithm_files/t.gif" border="0" width="134" height="8" alt=""></td>
+              </tr><tr bgcolor="#FFFFFF"> 
+                <td valign="top" width="14"><img src="./Beat This _ Beat Detection Algorithm_files/arrow.gif" border="0" width="12" height="12" alt=""></td>
+                <td width="130"> 
+                  <p><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/conclusions.html"><font face="verdana,arial" size="2" color="#000000"><b>Conclusions</b></font></a><br>
+                  </p>
+                  <p>&nbsp; </p>
+                </td>
+              </tr>
+              <tr><td bgcolor="#999999" colspan="2"><img src="./Beat This _ Beat Detection Algorithm_files/t.gif" border="0" width="134" height="8" alt=""></td>
+              </tr><tr bgcolor="#FFFFFF"> 
+                <td valign="top" width="14"><img src="./Beat This _ Beat Detection Algorithm_files/arrow.gif" border="0" width="12" height="12" alt=""></td>
+                <td width="130"> 
+                  <p><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/references.html"><font face="verdana,arial" size="2" color="#000000"><b>References</b></font></a><br>
+                  </p><p>&nbsp; </p>
+                  <p></p>
+                </td>
+              </tr>
+              <tr><td bgcolor="#999999" colspan="2"><img src="./Beat This _ Beat Detection Algorithm_files/t.gif" border="0" width="134" height="8" alt=""></td>
+              </tr><tr bgcolor="#FFFFFF"> 
+                <td valign="top" width="14"><img src="./Beat This _ Beat Detection Algorithm_files/arrow.gif" border="0" width="12" height="12" alt=""></td>
+                <td width="130"> 
+                  <p><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/about.html"><font face="verdana,arial" size="2" color="#000000"><b>About 
+                    The Gang </b></font></a>
+                  </p><p>&nbsp; </p>
+		   <hr>
+		  <a href="http://www.cgi2you.com/"><img src="./Beat This _ Beat Detection Algorithm_files/counter.php" border="0"></a>
+                 
+                </td>
+              </tr>
+            </tbody></table>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td colspan="2"> <img src="./Beat This _ Beat Detection Algorithm_files/t.gif" width="1" height="10" border="0" alt=""></td>
+
+        </tr>
+
+        <tr> 
+
+          <td colspan="2" align="center" height="2"> </td>
+
+        </tr>
+
+      </tbody></table>
+
+    </td>
+
+    <!-- left end -->
+
+    <!-- centerwell template: media/new_front_page.html -->
+
+    <!--begin center well-->
+
+    <td bgcolor="#ffffff" valign="top"> 
+
+      <table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="100%">
+
+        <tbody><tr> 
+
+          <td bgcolor="#003399" valign="middle" colspan="4"><img src="./Beat This _ Beat Detection Algorithm_files/t.gif" width="5" height="3" border="0" alt=""></td>
+
+        </tr>
+
+        <tr> 
+
+          <td bgcolor="#0066cc" align="left" colspan="4" height="4"><img src="./Beat This _ Beat Detection Algorithm_files/ppl_generic.gif" width="3" border="0" alt=""></td>
+
+        </tr>
+
+        <tr> 
+
+          <td bgcolor="#FFFFFF" valign="top" align="left"><img src="./Beat This _ Beat Detection Algorithm_files/cpl_generic.gif" width="3" height="3" border="0" alt=""></td>
+
+          <td bgcolor="#FFFFFF" valign="top" align="justified" width="100%">
+            <p>&nbsp; <u><b>Beat Detection Algorithm</b></u></p>	
+	    <p>We adapted a beat detection algorithm from the MIT Media Lab to Matlab
+	    for our project. Although the algorithm is quite mathematically
+	    involved, it basically amounts to emphasizing the sudden impulses of
+	    sound in the song and then finding the fundamental period at which
+	    these impulses appear. This is done by breaking the signal into
+	    frequency bands, extracting the envelope of these frequency-banded
+	    signals, differentiating them to emphasize sudden changes in sound,
+	    and running the signals through a comb-filterbank and choosing the
+	    highest energy result as our tempo. 
+
+	    Our algorithm does not account for the possibility of a varying tempo
+	    in a piece of music. It extracts 2.2 seconds of music from the middle 
+	    of a song, tempo-analyzes it, and assumes that the tempo found is 
+	    associated with the entire piece of music. The sample length, 2.2
+	    seconds, is the minimal amount of information we can work with to have
+	    at least two beats for the slowest tempo we are allowing for,
+	    60 bpm. We are choosing 2.2 seconds rather than 2 seconds to ensure
+	    that the tempo-choosing processing does not exagerrate the energy of
+	    60 bpm. A two second sample could have its beginning and end perceived
+	    as beats by a 60bpm search process. Since 60bpm is our lowest search
+	    tempo, any sample longer than two seconds works fine. 
+	    </p>
+	    
+	    <a name="filterbank"></a>
+            <p>&nbsp; <u><b>Step 1:  Filterbank</b></u></p>
+	    The signal is divided up into six separate signals, each consisting of
+	    the frequency content of the original signal from a certain
+	    range. This has the general effect of separating "notes" from
+different instrument groups and allowing them to be analyzed
+separately. Tempo-analyzing the original signal could be error-prone
+due to conflicting downbeats of different instruments. This separation
+is performed by taking the FFT of the signal and then taking
+appropriate sized chunks of the FFT and assigning them to their
+frequency bands. (Chunk length is dependent on both the sampling
+frequency and the signal length.) We chose to follow the method
+outlined in Scheirer, 1998 and broke our signal into the bands
+0-200Hz, 200-400Hz, 400-800Hz, 800-1600Hz, 1600-3200Hz, and finally
+3200Hz-Sampling Frequency. This gave us a total of six bands to work
+with. The inverse FFT of these signals is taken and their time domain
+representation is sent to the smoothing function.
+<br>
+            <br>
+
+	    <a name="smoothing"></a>
+            <p>&nbsp; <u><b>Step 2:  Smoothing</b></u></p>
+	    Since we are only looking for the tempo of our signal, we need to
+reduce it to a form where we can see sudden changes in sound. This is
+done by reducing the signal down to its envelope, which can be though
+of as the overall trend in sound amplitude, not the frequencies it
+carries. Essentially, we take each of our six frequency-banded
+signals and lowpass filter them. To accomplish this we first full-wave
+rectified our signals in order to decrease high-frequency content and
+so that we would only have to deal with the positive side of the
+envelope we were searching for. We then convolved each of our signals
+by the right half of a Hanning window with a length of .4
+seconds. Again, we chose to do this operation in the by transforming
+to the frequency domain, multiplying, and inverse transforming to
+decrease computation time. The resulting plots of the frequency-banded 
+signals definitely correspond to the envelopes of the original
+            signals. <br><br>
+
+	     <a name="diff-rect"></a>
+            <p>&nbsp; <u><b>Step 3:  Diff-Rect</b></u></p>
+	    Now that we have the signals in an enveloped form, we can simply
+differentiate them to accentuate when the sound amplitude changes. The
+largest changes should correspond to beats since the beat is just a
+periodic emphasis of sound. The six frequency-banded signals are
+differentiated in time and then half-wave rectified so we can only see
+increases in sound. The signals are now ready to be tempo-analyzed.
+<br><br>
+<a name="comb"></a>
+            <p>&nbsp; <u><b>Step 4:  Comb Filter</b></u></p>
+This is the most computationally intensive step. We need to convolve
+the differentiated frequency-banded signals with various comb filters
+to determine which yields the highest energy. A comb filter is
+basically a series of impulses that occur periodically, at the tempo
+you specify. Convolving a comb filter with a total of three impulses
+with our signal should give an output that has a higher energy when
+the tempo of the comb filter is close to a multiple of that of the
+song. This is because the convolving with the three impulse comb
+filter just results in an output vector made up of an echoed version
+of our original signal. This echoed output will have a higher energy
+if the tempo of the signal and comb filter match because it will
+result in there being higher peaks (overlap from echo) in the output 
+which when squared will give a higher energy. <br><br>
+
+We implemented the comb filter by specifying a range of tempos we
+wanted to search for and the resolution or spacing between them. This
+established a set of comb filters to convolve with our signal. The FFT
+of each frequency-banded signal was multipled by the FFT of each comb
+filter and the energy of each of these was taken. Then the energies of
+the frequency-bands were summed so that we were left with a vector of
+energies of tempos. This output takes the form of a peak at the
+fundamental tempo of the song followed by smaller, wider peaks at
+multiples of this tempo. We then choose the maximum value of these
+energies to be the fundamental tempo of our piece. <br><br><br>
+
+<a name="block"></a>
+            <p>&nbsp; <u><b>Beat Detection Block Diagram</b></u></p>
+    <center><img src="./Beat This _ Beat Detection Algorithm_files/FinalBlockDiag2.gif"></center>
+
+
+
+            <hr><br>
+
+	    <a name="code"></a>
+            <p>&nbsp; <u><b>Matlab Code</b></u></p>
+	    <ul>
+	    <li><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/code/filterbank.m" target="_blank"><b><font color="blue">filterbank.m</font></b></a> - 
+	    divides a time domain signal into individual frequency
+	    bands.</li>
+
+	    <li><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/code/hwindow.m" target="_blank"><b><font color="blue">hwindow.m</font></b></a> - 
+	    rectifies a signal, then convolves it with a half Hanning
+	    window.</li>
+
+	    <li><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/code/diffrect.m" target="_blank"><b><font color="blue">diffrect.m</font></b></a> - differentiates a signal, then half-wave rectifies the
+	    result.  </li>
+
+	    <li><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/code/timecomb.m" target="_blank"><b><font color="blue">timecomb.m</font></b></a> - finds the tempo of a musical signal, divided into
+	    frequency bands.</li>
+
+	    <li><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/code/control.m" target="_blank"><b><font color="blue">control.m</font></b></a> - takes in the names
+	    of two .wav files, and outputs their combination--beat-matched, and phase aligned.</li>
+	    </ul><br>
+
+	   <a name="plots"></a>
+            <p>&nbsp; <u><b>Matlab Plots</b></u></p>
+	    <center>
+	     <b>&nbsp; &nbsp; Step 1:
+            Filterbank (output of 1 frequency band)</b><br>
+	     <a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/images/plot1.gif"><img src="./Beat This _ Beat Detection Algorithm_files/plot1_small.gif"></a><br><br>
+	    
+   	     <b>&nbsp; &nbsp; Step 2:  Smoothing</b><br>
+	    <a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/images/plot2.gif"><img src="./Beat This _ Beat Detection Algorithm_files/plot2_small.gif"></a><br><br>
+
+   	     <b>&nbsp; &nbsp; Step 3:  Diff-Rect</b><br>
+	    <a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/images/plot3.gif"><img src="./Beat This _ Beat Detection Algorithm_files/plot3_small.gif"></a><br><br>
+
+   	     <b>&nbsp; &nbsp; Step 4:  Comb Filter</b><br>
+	    <a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/images/plot4.gif"><img src="./Beat This _ Beat Detection Algorithm_files/plot4_small.gif"></a><br><br>       	    
+	    </center>
+	    <p>&nbsp;</p>
+            </td>
+
+        </tr>
+		
+
+      </tbody></table>
+   
+    </td>
+
+    <!--end center well-->
+
+  </tr>
+
+</tbody></table>
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+
+  <tbody><tr> 
+
+    <td bgcolor="#003399" align="left"><img src="./Beat This _ Beat Detection Algorithm_files/t.gif" width="1" height="10" border="0" alt=""></td>
+
+  </tr>
+
+  <tr> 
+
+    <td bgcolor="#003399" align="center"> 
+
+      <p>&nbsp;</p>
+
+      <p>&nbsp;</p>
+
+    </td>
+
+  </tr>
+
+  <tr> 
+
+    <td bgcolor="#003399" align="left"><a href="https://www.clear.rice.edu/elec301/Projects01/beat_sync/beatalgo.html#"><img src="./Beat This _ Beat Detection Algorithm_files/t.gif" width="1" height="10" border="0" alt=""></a></td>
+
+  </tr>
+
+  <tr> 
+
+    <td align="center"><img src="./Beat This _ Beat Detection Algorithm_files/t.gif" border="0" width="1" height="4" alt=""><br>
+
+      <font face="verdana,arial" size="1" color="#999999"> (C) 2001
+
+    Beat This. 
+
+      All rights reserved.</font></td>
+
+  </tr>
+
+</tbody></table>
+
+<br>
+
+
+</font>
+
+
+ </body></html>
